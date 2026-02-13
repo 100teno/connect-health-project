@@ -3,44 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ConnectHealth</title>
+  <title>ConnectHealth - Exercícios</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <div id="splash">
-  <h1><span style="color:#34C759;">Connect</span><span style="color:#1F3C88;">Health</span></h1>
+  <h1>
+    <span style="color:#34C759;">Connect</span>
+    <span style="color:#1F3C88;">Health</span>
+  </h1>
 </div>
 
-  <div class="app-container">
-    <div class="app-header">
-        <div class="header-content">
+<div class="app-container">
 
-            <div class="logo-area">
-            <div class="logo-icon">💚</div>
-            <div class="logo-text">
-                <span class="green">Connect</span><span class="blue">Health</span>
+  <!-- HEADER -->
+  <div class="app-header">
+    <div class="header-content">
+
+      <div class="logo-area">
+        <div class="logo-icon">💚</div>
+        <div class="logo-text">
+          <span class="green">Connect</span>
+          <span class="blue">Health</span>
+        </div>
+      </div>
+
+      <div class="menu-toggle" id="menuToggle">
+        ☰
+      </div>
+
+    </div>
+
+    <p class="subtitle">Aulas de Exercícios</p>
+
+    <div class="streak-box">
+      🔥 <span id="streakCount">0</span> dias de ofensiva
+    </div>
+
+    <div class="last-workout">
+      Último treino: <span id="lastWorkout">Nenhum</span>
+    </div>
+
+  </div>
+  <!-- FIM HEADER -->
+
+  <!-- CONTEÚDO -->
+  <div class="app-content">
+
+    <div class="card">
+      <img src="https://img.youtube.com/vi/UItWltVZZmE/hqdefault.jpg">
+      <div class="card-body">
+        <h3>Treino para Iniciantes</h3>
+        <p>Ideal para começar sua jornada saudável.</p>
+        <a class="video-btn" target="_blank" data-treino="Iniciante"
+           href="https://www.youtube.com/watch?v=UItWltVZZmE">
+           ▶ Assistir
+        </a>
       </div>
     </div>
 
-    <div class="menu-toggle" id="menuToggle">
-      ☰
+    <div class="card">
+      <img src="https://img.youtube.com/vi/ml6cT4AZdqI/hqdefault.jpg">
+      <div class="card-body">
+        <h3>Treino Cardio em Casa</h3>
+        <p>Melhore seu condicionamento físico.</p>
+        <a class="video-btn" target="_blank" data-treino="Cardio"
+           href="https://www.youtube.com/watch?v=ml6cT4AZdqI">
+           ▶ Assistir
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://img.youtube.com/vi/1919eTCoESo/hqdefault.jpg">
+      <div class="card-body">
+        <h3>Treino de Abdômen</h3>
+        <p>Fortaleça sua região abdominal.</p>
+        <a class="video-btn" target="_blank" data-treino="Abdômen"
+           href="https://www.youtube.com/watch?v=1919eTCoESo">
+           ▶ Assistir
+        </a>
+      </div>
     </div>
 
   </div>
-
-  <p class="subtitle">Aulas de Exercícios</p>
-
-  <div class="streak-box">
-  🔥 <span id="streakCount">0</span> dias de ofensiva
-  </div>
-
-  <div class="last-workout">
-  Último treino: <span id="lastWorkout">Nenhum</span>
-  </div>
-
+  <!-- FIM CONTEÚDO -->
 
 </div>
 
+<!-- MENU LATERAL -->
 <div class="side-menu" id="sideMenu">
   <div class="close-btn" id="closeMenu">✕</div>
   <a href="index.html">🏠 Início</a>
@@ -51,50 +103,9 @@
   <a href="#">⚙ Configurações (em breve)</a>
 </div>
 
-
-
-
-      <div class="card">
-        <img src="https://img.youtube.com/vi/UItWltVZZmE/hqdefault.jpg">
-        <div class="card-body">
-          <h3>Treino para Iniciantes</h3>
-          <p>Ideal para começar sua jornada saudável.</p>
-          <a class="video-btn" target="_blank" data-treino="Iniciante"
-             href="https://www.youtube.com/watch?v=UItWltVZZmE">
-             ▶ Assistir
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://img.youtube.com/vi/ml6cT4AZdqI/hqdefault.jpg">
-        <div class="card-body">
-          <h3>Treino Cardio em Casa</h3>
-          <p>Melhore seu condicionamento físico.</p>
-          <a class="video-btn" target="_blank" data-treino="Iniciante"
-             href="https://www.youtube.com/watch?v=ml6cT4AZdqI">
-             ▶ Assistir
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://img.youtube.com/vi/1919eTCoESo/hqdefault.jpg">
-        <div class="card-body">
-          <h3>Treino de Abdômen</h3>
-          <p>Fortaleça sua região abdominal.</p>
-          <a class="video-btn" target="_blank" data-treino="Iniciante"
-             href="https://www.youtube.com/watch?v=1919eTCoESo">
-             ▶ Assistir
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
+<div class="overlay" id="overlay"></div>
 
 <script src="js/script.js"></script>
-<div class="overlay" id="overlay"></div>
+
 </body>
 </html>
