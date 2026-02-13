@@ -30,21 +30,6 @@ Armazenamento local com LocalStorage
 
 O projeto foi desenvolvido seguindo o conceito mobile-first, simulando a interface de um aplicativo em tela de smartphone.
 
-Estrutura do Projeto
-/ConnectHealth
-│
-├── index.html
-├── exercicios.html
-├── cardapios.html
-├── ofensiva.html
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── script.js
-│
-└── README.md
 
 Funcionalidades Implementadas
 
