@@ -232,12 +232,39 @@ function renderMonthlyStats() {
   monthWorkouts.forEach(h => {
     types[h.type] = (types[h.type] || 0) + 1;
   });
+  
+}
 
-  let mostTrained = Object.keys(types).reduce((a,b)=> types[a]>types[b]?a:b, "-");
+function getMostTrained() {
+  const treinos = JSON.parse(localStorage.getItem("treinos")) || [];
 
-  stats.innerText = 
-    "Treinos realizados: " + total +
-    " | Tipo mais treinado: " + mostTrained;
+  if (treinos.length === 0) {
+    return "Nenhum ainda";
+  }
+
+  const contagem = {};
+
+  treinos.forEach(t => {
+    contagem[t] = (contagem[t] || 0) + 1;
+  });
+
+  let maisTreinado = null;
+  let maior = 0;
+
+  for (let tipo in contagem) {
+    if (contagem[tipo] > maior) {
+      maior = contagem[tipo];
+      maisTreinado = tipo;
+    }
+  }
+
+  return maisTreinado || "Nenhum ainda";
+}
+
+
+const most = document.getElementById("mostTrained");
+if (most) {
+  most.textContent = getMostTrained();
 }
 
 document.addEventListener("DOMContentLoaded", renderMonthlyStats);

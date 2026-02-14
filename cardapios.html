@@ -1,77 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cardápios - ConnectHealth</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<div id="splash">
-  <h1><span style="color:#34C759;">Connect</span><span style="color:#1F3C88;">Health</span></h1>
-</div>
+  <div id="splash">
+    <h1><span style="color:#34C759;">Connect</span><span style="color:#1F3C88;">Health</span></h1>
+  </div>
 
-<div class="app-container">
+  <div class="app-container">
 
-  <div class="app-header">
-    <div class="header-content">
+    <div class="app-header">
+      <div class="header-content">
 
-      <a href="index.html" class="home-btn">🏠</a>
+        <a href="index.html" class="home-btn">🏠</a>
 
-      <div class="logo-area">
-        <div class="logo-icon">💚</div>
-        <div class="logo-text">
-          <span class="green">Connect</span><span class="blue">Health</span>
+        <div class="logo-area">
+          <div class="logo-icon">💚</div>
+          <div class="logo-text">
+            <span class="green">Connect</span><span class="blue">Health</span>
+          </div>
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+
+      </div>
+
+      <p class="subtitle">Cardápios Saudáveis</p>
+      <footer class="app-footer">
+        <p>© 2026 ConnectHealth • Vida saudável todos os dias</p>
+      </footer>
+    </div>
+
+    <div class="app-content">
+
+      <div class="card">
+        <div class="card-body">
+          <h3>🥗 Café da Manhã Fit</h3>
+          <p>Ovos mexidos + fruta + café sem açúcar.</p>
         </div>
       </div>
 
-      <div class="menu-toggle" id="menuToggle">☰</div>
+      <div class="card">
+        <div class="card-body">
+          <h3>🍗 Almoço Balanceado</h3>
+          <p>Arroz integral + frango grelhado + salada.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h3>🥑 Jantar Leve</h3>
+          <p>Salada com proteína + azeite extra virgem.</p>
+        </div>
+      </div>
 
     </div>
+    <footer class="app-footer">
+      <p>© 2026 ConnectHealth • Vida saudável todos os dias</p>
+    </footer>
 
-    <p class="subtitle">Cardápios Saudáveis</p>
+    <div class="side-menu" id="sideMenu">
+      <div class="close-btn" id="closeMenu">✕</div>
+      <a href="index.html">🏠 Início</a>
+      <a href="exercicios.html">🏃 Exercícios</a>
+      <a href="cardapios.html">🥗 Cardápios Saudáveis</a>
+      <a href="ideias.html">💡 Ideias Saudáveis</a>
+      <a href="ofensiva.html">🔥 Ofensiva & Progresso</a>
+      <a href="#">⚙ Configurações (em breve)</a>
+    </div>
   </div>
 
-  <div class="app-content">
+  <div class="overlay" id="overlay"></div>
 
-    <div class="card">
-      <div class="card-body">
-        <h3>🥗 Café da Manhã Fit</h3>
-        <p>Ovos mexidos + fruta + café sem açúcar.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-body">
-        <h3>🍗 Almoço Balanceado</h3>
-        <p>Arroz integral + frango grelhado + salada.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-body">
-        <h3>🥑 Jantar Leve</h3>
-        <p>Salada com proteína + azeite extra virgem.</p>
-      </div>
-    </div>
-
-  </div>
-
-</div>
-
-<div class="side-menu" id="sideMenu">
-  <div class="close-btn" id="closeMenu">✕</div>
-  <a href="index.html">🏠 Início</a>
-  <a href="exercicios.html">🏃 Exercícios</a>
-  <a href="cardapios.html">🥗 Cardápios Saudáveis</a>
-  <a href="ideias.html">💡 Ideias Saudáveis</a>
-  <a href="ofensiva.html">🔥 Ofensiva & Progresso</a>
-  <a href="#">⚙ Configurações (em breve)</a>
-</div>
-
-<div class="overlay" id="overlay"></div>
-
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
