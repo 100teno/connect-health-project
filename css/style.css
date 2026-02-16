@@ -12,10 +12,10 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-
   background: linear-gradient(135deg, #e6f9f0, #e6f0ff);
+  display: flex;
+  justify-content: center;
 }
-
 
 body::before {
   content: "";
@@ -31,13 +31,30 @@ body::before {
 /* smartphone widht */
 .app-container {
   width: 100%;
+  max-width: 480px; /* mobile-first */
   min-height: 100vh;
   background: white;
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
 }
+
+@media (min-width: 1024px) {
+
+  .app-container {
+    max-width: 1100px;
+    min-height: 90vh;
+    margin: 40px 0;
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+  }
+
+  .app-content {
+    padding: 40px;
+  }
+
+}
+
 
 /* Desktop */
 
@@ -57,6 +74,41 @@ body::before {
     gap: 20px;
   }
 }
+
+@media (max-width: 480px) {
+
+  .app-header {
+    padding: 16px;
+  }
+
+  .card {
+    border-radius: 14px;
+  }
+
+  .card-body h3 {
+    font-size: 16px;
+  }
+
+  .video-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .side-menu {
+    position: relative;
+    right: 0;
+    height: auto;
+    box-shadow: none;
+    width: 240px;
+    border-left: 1px solid #eee;
+  }
+
+}
+
 
 
 /* header do app */
@@ -394,4 +446,31 @@ html, body {
   font-size: 13px;
   color: #8E8E93;
   border-top: 1px solid #eee;
+  background: white;
+}
+
+.streak-preview {
+  position: relative;
+  overflow: visible; /* MUITO IMPORTANTE */
+}
+
+.preview-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.streak-preview:hover .preview-box {
+  opacity: 1;
+  transform: translateY(0);
 }

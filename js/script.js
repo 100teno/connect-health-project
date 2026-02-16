@@ -268,3 +268,44 @@ if (most) {
 }
 
 document.addEventListener("DOMContentLoaded", renderMonthlyStats);
+
+// cardapios no array (dinamico)
+
+const cardapios = [
+  {
+    titulo: "🥗 Café da Manhã Fit",
+    descricao: "Ovos mexidos + fruta + café sem açúcar."
+  },
+  {
+    titulo: "🍗 Almoço Balanceado",
+    descricao: "Arroz integral + frango grelhado + salada."
+  },
+  {
+    titulo: "🥑 Jantar Leve",
+    descricao: "Salada com proteína + azeite extra virgem."
+  },
+  {
+    titulo: "🍌 Lanche Pré-Treino",
+    descricao: "Banana + pasta de amendoim."
+  },
+  {
+    titulo: "🐟 Jantar Proteico",
+    descricao: "Salmão grelhado + legumes."
+  }
+];
+
+const container = document.getElementById("listaCardapios");
+
+if (container) {
+  cardapios.forEach(item => {
+    container.innerHTML += `
+      <div class="card">
+        <div class="card-body">
+          <h3>${item.titulo}</h3>
+          <p>${item.descricao}</p>
+        </div>
+      </div>
+    `;
+  });
+}
+
